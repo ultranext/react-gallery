@@ -47,16 +47,16 @@ module.exports = {
       loader: 'react-hot!babel-loader'
     }, {
       test: /\.scss/,
-      loader: 'style-loader!css-loader!autoprefixer-loader?{browsers:['last 2 version']}!sass-loader?outputStyle=expanded'
+      loader: 'style-loader!css-loader!autoprefixer-loader?{browsers:["last 2 version"]}!sass-loader?outputStyle=expanded'
     }, {
       test: /\.css$/,
-      loader: 'style-loader!css-loader!autoprefixer-loader?{browsers:['last 2 version']}'
+      loader: 'style-loader!css-loader!autoprefixer-loader?{browsers:["last 2 version"]}'
     }, {
-      test: /\.(png|jpg|woff|woff2)$/,
+      test: /\.(png|jpg|woff|woff2|eot|ttf|svg)$/,
       loader: 'url-loader?limit=8192'
     },{
       test:/\.json$/,
-      loader:/\.'json-loader'/
+      loader:'json-loader'
     }
     ]
   },

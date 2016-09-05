@@ -54,16 +54,16 @@ module.exports = {
       loader: 'babel-loader'
     }, {
       test: /\.css$/,
-      loader: 'style-loader!css-loader'
+      loader: 'style-loader!css-loader!autoprefixer-loader?{browsers:["last 2 version"]}'
     }, {
-      test: /\.sass/,
-      loader: 'style-loader!css-loader!sass-loader?outputStyle=expanded&indentedSyntax'
+      test: /\.scss/,
+      loader: 'style-loader!css-loader!autoprefixer-loader?{browsers:["last 2 version"]}!sass-loader?outputStyle=expanded'
     }, {
-      test: /\.(png|jpg|woff|woff2)$/,
+      test: /\.(png|jpg|woff|woff2|eot|ttf|svg)$/,
       loader: 'url-loader?limit=8192'
     },{
       test:/\.json$/,
-      loader:/\.'json-loader'/
+      loader:'json-loader'
     }
 
     ]
